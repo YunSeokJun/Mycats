@@ -6,13 +6,13 @@ def VPS():
         return False
     else:
         if st_list[0] is ')' or st_list[-1] is '(':# "처음과 마지막 확인"
-            print(st_list[0])
-            print(st_list[-1])
             return False
 
         for x in st_list: #"괄호 갯수 확인"
             if x is '(': check = check + 1
-            else: check = check -1
+            else:
+                if check < 0 : return False 
+                check = check -1
 
 
         return not check
