@@ -9,7 +9,7 @@ def DFS(start):
         if check[x]: continue
         DFS(x)
 
-N, M  = [int(x) for x in stdin.readline().split()]
+N, M  = [int(x) for x in stdin.readline().split()] # 정점 N / 간선 M
 graph = [[] for x in range(N+1)]
 
 for x in range(M):
