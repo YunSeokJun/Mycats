@@ -1,10 +1,10 @@
 #DFS
 def DFS(graph, start, check):
+    if check[start-1]: return
     check[start-1] = True # 들어간 자리 = True / 간적 없는곳 = False
     print(start, end = ' ') # 들어간 자리 출력
     for x in graph[start-1]:
         if not check[x-1]: DFS(graph, x, check)
-    return
 #BFS
 def BFS(graph, start, check):
     queue = list()
