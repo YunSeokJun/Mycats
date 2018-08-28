@@ -4,10 +4,8 @@ T = int(stdin.readline())
 rag = list()
 
 for x in range(T):
-    rag.append(list(map(int, stdin.readline().split())))
-
-for x in range(len(rag)):
+    N, M = map(int, stdin.readline().split())
     check = 1
-    for y in range(1,rag[x][0]+1):
-            check = check*(rag[x][1]-rag[x][0]+y)/y
+    for y in range(1,N+1):
+            check = check*(M-N+y)/y
     print(int(check))
